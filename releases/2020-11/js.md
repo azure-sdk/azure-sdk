@@ -11,6 +11,7 @@ The Azure SDK team is pleased to make available the November 2020 client library
 #### GA
 
 - _REMEMBER TO ADD YOUR GA PACKAGES_
+- Azure Identity.
 
 #### Updates
 
@@ -19,6 +20,8 @@ The Azure SDK team is pleased to make available the November 2020 client library
 #### Beta
 
 - _REMEMBER TO ADD YOUR BETA PACKAGES_
+- Azure Core AMQP.
+- Azure Service Bus.
 
 ## Installation Instructions
 
@@ -62,6 +65,22 @@ Keep in mind that:
 - _Add one or more, or remove the "Major Fixes on ..." section._
 
 ---
+
+### Identity [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/<service-folder>/<package-folder>/CHANGELOG.md)
+
+We're glad to announce a new major release of our Identity package. This release includes standardized `ManagedIdentityCredential` support across languages, as well as improvements to `VisualStudioCodeCredential`, `DeviceCodeCredential` and `InteractiveBrowserCredential`.
+
+##### New Features on _Package name_
+
+- With 1.2, we've added support for Azure Arc to our Managed Identity credential.
+- `InteractiveBrowserCredential` now works for Node, which spawns the user's browser and connects via a browser-based auth code flow.
+- Identity now supports Subject Name/Issuer (SNI) as part of authentication for ClientCertificateCredential.
+- Added Active Directory Federation Services authority host support to the node credentials.
+- Added support for multiple clouds on `VisualStudioCodeCredential`.
+
+##### Major Fixes on _Package name_
+
+- Added support for authenticating with user assigned identities on Azure App Service.
 
 ## Latest Releases
 
