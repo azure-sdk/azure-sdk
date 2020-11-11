@@ -66,11 +66,11 @@ Keep in mind that:
 
 ---
 
-### Identity [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/identity/identity/CHANGELOG.md#120-2020-11-11)
+### Identity 1.2.0 [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/identity/identity/CHANGELOG.md#120-2020-11-11)
 
 We're glad to announce a new major release of our Identity package. This release includes standardized `ManagedIdentityCredential` support across languages, as well as improvements to `VisualStudioCodeCredential`, `DeviceCodeCredential` and `InteractiveBrowserCredential`.
 
-##### New Features on _Package name_
+##### New Features on Identity 1.2.0
 
 - With 1.2, we've added support for Azure Arc to our Managed Identity credential.
 - `InteractiveBrowserCredential` now works for Node, which spawns the user's browser and connects via a browser-based auth code flow.
@@ -78,7 +78,7 @@ We're glad to announce a new major release of our Identity package. This release
 - Added Active Directory Federation Services authority host support to the node credentials.
 - Added support for multiple clouds on `VisualStudioCodeCredential`.
 
-##### Major Fixes on _Package name_
+##### Major Fixes on Identity 1.2.0
 
 - Added support for authenticating with user assigned identities on Azure App Service.
 
