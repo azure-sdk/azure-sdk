@@ -13,6 +13,7 @@ The Azure SDK team is pleased to make available the November 2020 client library
 - _REMEMBER TO ADD YOUR GA PACKAGES_
 - Azure Identity.
 - Azure Tables.
+- Azure Core AMQP.
 
 #### Updates
 
@@ -21,7 +22,6 @@ The Azure SDK team is pleased to make available the November 2020 client library
 #### Beta
 
 - _REMEMBER TO ADD YOUR BETA PACKAGES_
-- Azure Core AMQP.
 - Azure Service Bus.
 
 ## Installation Instructions
