@@ -72,6 +72,7 @@ We're glad to announce a new major release of our Identity package. This release
 
 ##### New Features on Identity 1.2.0
 
+- Now, the Azure Identity library ensures security and consistency by relying on a new dependency: the Microsoft Authentication Library (MSAL). MSAL allows us to have a standard behavior across platforms, and will be used over time to provide many rich features, such as credential caching.
 - With 1.2, we've added support for Azure Arc to our Managed Identity credential.
 - `InteractiveBrowserCredential` now works for Node, which spawns the user's browser and connects via a browser-based auth code flow.
 - Identity now supports Subject Name/Issuer (SNI) as part of authentication for ClientCertificateCredential.
