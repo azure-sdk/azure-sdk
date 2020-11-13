@@ -13,11 +13,15 @@ The Azure SDK team is pleased to make available the November 2020 client library
 - _REMEMBER TO ADD YOUR GA PACKAGES_
 - Azure Identity.
 - Azure Tables.
+- Azure Storage Blob.
+- Azure Storage Data Lake.
+- Azure Storage File Share.
 
 #### Updates
 
 - _REMEMBER TO ADD YOUR UPDATE PACKAGES_
 - Azure Event Hubs.
+- Azure Storage Queue.
 
 #### Beta
 
