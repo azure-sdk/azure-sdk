@@ -17,6 +17,7 @@ The Azure SDK team is pleased to make available the November 2020 client library
 #### Updates
 
 - _REMEMBER TO ADD YOUR UPDATE PACKAGES_
+- Azure Event Hubs.
 
 #### Beta
 
@@ -30,6 +31,7 @@ To install the packages, copy and paste the below into a terminal.
 ```bash
 $> npm install @azure/identity
 $> npm install @azure/tables
+$> npm install @azure/event-hubs@latest
 $> npm install @azure/service-bus@next
 ```
 
@@ -98,6 +100,16 @@ We're releasing a new preview of our Azure Tables library. This update provides 
 ##### Major fixes on @azure/data-tables@1.0.0-beta3
 
 Renamed system properties `odata.etag` and `Timestamp` to provide more idiomatic property names. Queried entities now get the properties `etag` and `timestamp` instead of `odata.etag` and `Timestamp`,
+
+### Event Hubs 
+
+We're releasing an Azure Event Hubs client update with a necessary bug fix to the `EventHubConsumerClient.subscribe()` event handler.
+
+#### @azure/event-hubs@3.5.1 [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/eventhub/event-hubs/CHANGELOG.md)
+
+##### Major Fixes on @azure/event-hubs@3.5.1
+
+- Fixes an issue where the `processEvents` handler passed to `EventHubConsumerClient.subscribe()` could ignore the `maxWaitTimeInSeconds` parameter after a disconnection, resulting in `processEvents` being invoked rapidly without events.
 
 ### Service Bus
 
