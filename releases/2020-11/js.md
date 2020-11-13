@@ -35,6 +35,10 @@ To install the packages, copy and paste the below into a terminal.
 ```bash
 $> npm install @azure/identity
 $> npm install @azure/tables
+$> npm install @azure/storage-blob
+$> npm install @azure/storage-file-datalake
+$> npm install @azure/storage-file-share
+$> npm install @azure/storage-queue@latest
 $> npm install @azure/event-hubs@latest
 $> npm install @azure/service-bus@next
 ```
@@ -58,7 +62,7 @@ Keep in mind that:
 
 ### _Project name_ 
 
-#### @azure/_package-name_@_version_ [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/<service-folder>/<package-folder>/CHANGELOG.md)
+#### @azure/_package-name_ [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/<service-folder>/<package-folder>/CHANGELOG.md)
 
 (leave blank)
 
@@ -80,7 +84,7 @@ Keep in mind that:
 
 We're glad to announce a new major release of our Identity package. This release includes standardized `ManagedIdentityCredential` support across languages, as well as improvements to `VisualStudioCodeCredential`, `DeviceCodeCredential` and `InteractiveBrowserCredential`.
 
-#### @azure/identity@1.2.0 [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/identity/identity/CHANGELOG.md#120-2020-11-11)
+#### @azure/identity [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/identity/identity/CHANGELOG.md)
 
 ##### New Features on @azure/identity@1.2.0
 
@@ -99,17 +103,45 @@ We're glad to announce a new major release of our Identity package. This release
 
 We're releasing a new preview of our Azure Tables library. This update provides more idiomatic names to the system properties for `odata.etag` and `Timestamp`.
 
-#### @azure/data-tables@1.0.0-beta3 [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/tables/data-tables/CHANGELOG.md)
+#### @azure/data-tables [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/tables/data-tables/CHANGELOG.md)
 
 ##### Major fixes on @azure/data-tables@1.0.0-beta3
 
 Renamed system properties `odata.etag` and `Timestamp` to provide more idiomatic property names. Queried entities now get the properties `etag` and `timestamp` instead of `odata.etag` and `Timestamp`,
 
-### Event Hubs 
+### Azure Storage
+
+We are releasing to add support for new service features in Azure Storage Service API version 2020-02-10.
+
+#### @azure/storage-blob [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/storage/storage-blob/CHANGELOG.md)
+
+##### New Features on @azure/storage-blob@12.3.0
+
+- Added `BlockBlobClient.uploadData(data: Buffer | Blob | ArrayBuffer | ArrayBufferView, options)` for parallel uploading. It's avaiable in both Node.js and browsers.
+
+#### @azure/storage-file-datalake [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/storage/storage-file-datalake/CHANGELOG.md)
+
+##### Major Fixes on @azure/storage-file-datalake@12.2.0
+
+- Fixed an issue where `DataLakePathClient.move()` will give an `InvalidSourceUri` error when the copy source name contains characters that need to be URL encoded.
+
+#### storage-file-share [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/storage/storage-file-share/CHANGELOG.md)
+
+##### New Features on @azure/storage-file-share@12.3.0
+
+- Added `ShareClient.setProperties()`, which can be used to set both Share Tier and Share Quota.
+
+#### storage-queue [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/storage/storage-queue/CHANGELOG.md)
+
+##### New Features on @azure/storage-queue@12.2.0
+
+- Updated Azure Storage Service API version to 2020-02-10.
+
+### Event Hubs
 
 We're releasing an Azure Event Hubs client update with a necessary bug fix to the `EventHubConsumerClient.subscribe()` event handler.
 
-#### @azure/event-hubs@3.5.1 [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/eventhub/event-hubs/CHANGELOG.md)
+#### @azure/event-hubs [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/eventhub/event-hubs/CHANGELOG.md)
 
 ##### Major Fixes on @azure/event-hubs@3.5.1
 
@@ -119,7 +151,7 @@ We're releasing an Azure Event Hubs client update with a necessary bug fix to th
 
 This is the last preview version of the Azure Service Bus client library before releasing it for general availability later this month, this release includes improvements in error handling, various interface/method/type updates and internal improvements in terms of memory consumption.
 
-#### @azure/service-bus@7.0.0-preview.8 [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/servicebus/service-bus/CHANGELOG.md#700-preview8-2020-11-04)
+#### @azure/service-bus [Changelog](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/servicebus/service-bus/CHANGELOG.md)
 
 ##### Breaking Changes on @azure/service-bus@7.0.0-preview.8
 
